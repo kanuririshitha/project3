@@ -10,11 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: List Files
-        run: ls -la
-
-      - name: Build Successful
-        run: echo "CI Pipeline executed successfully!"
+      - name: Check Website Files
+        run: |
+          ls -la
+          ls -la website
